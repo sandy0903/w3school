@@ -1,0 +1,461 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.pc-hidden{
+    color:#fff;
+    display:none;
+}
+html{
+    scroll-behavior: smooth
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none
+}
+
+#header{
+    background-color:#000;
+    height:46px;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1;
+}
+.header-nav{
+    display:inline-block;
+}
+.header-nav li{
+    display:inline-block;
+    position:relative;
+}
+.header-nav li:hover,
+.tour .btn:hover{
+    background-color: #ccc;
+    
+}
+
+.header-nav li:hover a,
+.tour button:hover{
+    color:#000;
+}
+.header-nav >li >a{
+    color:#fff;
+    font-size:15px;
+    text-transform: uppercase;
+    line-height:46px;
+    padding:0 24px;
+    display:block;
+
+}
+#header .header-nav li:hover .subnav{
+    display:inline-block;
+
+}
+#header .subnav{
+    background-color:#fff;
+    display:none;
+    position: absolute;
+    top:46px;
+    left:0;
+    min-width:160px;
+    
+
+      
+}
+#header .subnav li{
+    display:block;
+    padding:0 16px;
+    line-height:40px;
+}
+#header .subnav li a{
+    color:#000;
+    font-size:18px;
+    width:128px;
+}
+
+#header .search,
+#header .hamburger-menu{
+    float:right;
+    color:#fff;
+    line-height: 46px;
+    padding:0 24px;
+    cursor:pointer;
+}
+#header .search:hover{
+    background-color:#f44336;
+}
+/* ending header navigation */
+
+/* start slider section */
+#slider{
+    background: url("https://www.w3schools.com/w3images/ny.jpg") top center /cover no-repeat;
+    /*padding= % is meant = % of the width*/
+    padding-top:50%;
+    margin-top:46px;
+    position: relative;
+   
+    
+}
+#slider .text{
+    position: absolute;
+    bottom:0;
+    color:#fff;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%)
+}
+.text .text-heading{
+    font-weight:500;
+    margin-top:10px ;
+}
+.text .text-sub-heading{
+    margin:20px 0 30px;
+}
+/* ending slider section */
+
+/*start content section */
+
+
+#content .main-section{
+    max-width: 800px;
+    padding:64px 16px;
+    margin:auto;
+    text-align:center;
+}
+#content .main-section .heading{
+    margin:10px 0;
+    font-weight:500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+#content .main-section .sub-heading{
+    padding:15px 0;
+    font-style: italic;
+    opacity:0.7
+
+}
+/* about section */
+#content .main-section .text{
+    text-align:justify;
+    padding:15px 0;
+    line-height:1.4;
+}
+#content .main-section .members{
+    padding:32px 0;
+}
+.main-section .members .member{
+    float:left;
+    width:33.33333%
+}
+#content .member p{
+    margin:15px 0;
+    
+}
+#content .member img{
+    width:60%;
+    border-radius: 6px;
+}
+/* tour section */
+#content-tour{
+    background-color:#000;
+    color:#fff;  
+
+}
+#content-tour ul{
+    background-color: #fff;
+    width:100%;
+    color:#aaa;
+    padding:0 8px;
+}
+#content-tour ul li{
+    padding:8px 16px;
+    text-align:left;
+    border-bottom:1px solid #ccc;
+    
+}
+#content-tour ul li span{
+    float: right;
+    
+}
+#content-tour ul li:not(:last-child) span{
+    background-color:#f44336;
+    color:#fff;
+    padding:4px 8px;
+    margin-top:-4px;
+
+}
+#content-tour ul li:last-child span{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background-color: #000;
+    line-height:20px;
+    text-align: center;
+}
+#content-tour .tours{
+    padding:32px 0;
+    text-align:left;
+}
+.tours{
+    display:inline-flex;
+    
+    
+}
+
+#content-tour .tours .tour{
+    width:33.3333%;
+    color:#000;
+    
+}
+
+#content-tour .tours .tour:nth-child(2){
+    margin:0 16px;
+}
+#content-tour .tours .tour img{
+    width:100%;
+    display:block;
+}
+#content-tour .tours .tour img:hover{
+    opacity: 0.6;
+}
+
+#content-tour .tour .tour-info{
+    background-color:#fff;
+    padding:0 16px;
+    
+}
+.tour .tour-info h4,
+.tour-day,
+p{
+    padding:10px 0;
+    font-size: 15px;
+}
+.tour .tour-info .tour-day{
+    opacity:0.7;
+}
+.tour-info .tour-day ~ p{
+    line-height:1.3;
+}
+.tour .btn,
+form button{
+    padding:16px 0px;
+    width:90px;
+    background-color: #000;
+    color:#fff;
+    border:none;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom:15px;
+    
+}
+
+
+
+/* modal section */
+.show{
+    display:block;
+}
+.hidden{
+    display:none;
+}
+.modal{
+    
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal .modal-container{
+    width: 800px;
+    max-width:calc(100% - 32px);
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:100px;
+    animation:slide-down ease .6s ;
+}
+.modal-container .modal-header{
+    background-color:#009688;
+    color:#fff;
+    position: relative;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:120px;
+}
+.modal-header h1{
+    font-size:45px;
+    padding:10px 0;
+}
+.modal-header a{
+    color:#fff;
+    position: absolute;
+    top:0;
+    right:0;
+    padding:12px;
+}
+.modal .modal-body{
+    background-color:#fff;
+    min-height:320px;
+    padding:0 16px;
+}
+.modal .modal-body label{
+    font-size:15px;
+    margin:15px 0;
+    display:inline-block;
+}
+.modal .modal-body input{
+    padding:8px;
+    display:block;
+    width:100%;
+    
+}
+.modal .modal-body input:focus{
+    border:1px solid #009688;
+    outline:none;
+}
+.modal .modal-body button{
+    width:100%;
+    margin:15px 0;
+    padding:16px;
+    font-size:20px;
+    background-color: #009688;
+}
+@keyframes slide-down{
+    from{
+        opacity:0;
+        padding-top:0;
+    }
+    to{
+        opacity:1;
+        padding-top:100px;
+
+    }
+}
+/* Contact section */
+
+#content-contact .contact-info{
+    padding:16px 0;
+    display:inline-flex;
+    justify-content: space-between;
+    text-align: left;
+   
+}
+#content-contact form{
+    width:50%;
+    margin-top:0.7rem;
+    text-align: right
+}
+form input{
+    padding:9px;
+    margin-bottom:8px;
+    margin-right:1px;
+    border:1px solid #ccc;
+}
+form input:nth-child(3){
+    width:100%;
+}
+form button{
+    width:20%;
+    
+
+}
+#content-contact .bg-img{
+    padding-top:50%;
+    background: url(https://www.w3schools.com/w3images/map.jpg) top center /cover no-repeat
+}
+
+
+/*footer section*/
+#footer{
+    padding:50px;
+    text-align: center;
+
+}
+#footer ul li{
+    display:inline-block;
+    
+
+}
+#footer ul li a{
+    color:#000;
+    font-size:1.5rem;
+    opacity:0.6;
+    padding:0 4px;
+}
+#footer ul li a:hover{
+    opacity: 0.5;
+}
+/*pc breakpoint */
+
+@media only screen and (min-width:1023px){
+
+}
+/* tablet breakpoint */
+@media only screen and (min-width:739px) and (max-width:1023px){
+
+}
+/* mobile breakpoint */
+@media only screen and (max-width:739px){
+    .main-section .members .col-full,
+    #content-contact .col-full,
+    #content-tour .tours .col-full{
+        width:100%;
+    }
+    .pc-hidden{
+        display:block;
+    }
+    .mobile-hidden{
+        display:none;
+    }
+    /*
+    .header-nav li:not(:first-child){
+        display: none;
+    }
+    */
+    #header {
+        overflow: hidden;
+    }
+    .header-nav,
+    .header-nav li:not(:first-child),
+    .tours{
+        display:block;
+    }
+    #header .hamburger-menu{
+        position: absolute;
+        top:0;
+        right:0px;
+
+    }
+    #header .hamburger-menu:hover{
+        background-color: #ccc;
+        color:#000;
+    }
+    #content-tour .tours .tour:nth-child(2){
+        margin:16px 0; 
+    }
+    #content-contact .contact-info{
+        display: block;
+    }
+    #content-contact .contact-info p{
+        
+        font-size:20px;
+    }
+    form input{
+        font-size:25px;
+        margin:12px 0;
+    }
+    #footer ul li{
+        padding: 3px 10px;
+    }
+    #footer ul li a{
+        font-size: 1.9rem;
+    }
+
+}
